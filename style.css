@@ -1,0 +1,115 @@
+/* ১. গ্লোবাল সেটিংস */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+}
+
+/* ২. হেডার (Full Width) */
+header {
+    background-color: #004d40;
+    color: white;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo a:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.logo span {
+    color: #43b048;
+    margin: 7px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ৩. হিরো সেকশন (ভ্যাট অনলাইন স্টাইল) */
+.hero {
+    background: linear-gradient(to right, #e8f5e9, #ffffff);
+    padding: 80px 10%;
+    border-bottom: 4px solid #2e7d32;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.hero h1 span { color: #1565c0; }
+
+.btn {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* ৪. মেইন লেআউট (Responsive Grid/Flex) */
+main {
+    display: flex;
+    flex-wrap: wrap; /* এটিই মোবাইলে নিচে নিচে নামিয়ে আনবে */
+    gap: 20px;
+    padding: 50px 10%;
+    min-height: 48vh;
+}
+
+.service-card {
+    flex: 1 1 300px; /* ৩০০ পিক্সেলের নিচে নামলে অটোমেটিক নিচে যাবে */
+    background: white;
+    padding: 30px;
+    border-left: 8px solid #2e7d32;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ৫. ফুটার */
+footer {
+    background: #263238;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ৬. মোবাইল রেসপনসিভ (Media Queries) */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* মোবাইলে মেনু হাইড করার সিম্পল ট্রিক */
+    .hero { text-align: center; padding: 50px 5%; }
+    .hero h1 { font-size: 1.8rem; }
+}
